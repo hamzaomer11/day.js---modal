@@ -1,14 +1,14 @@
 
 MicroModal.init();
 
-// function apply() {
-//     let choice = document.getElementById('chicago').value;
+function apply() {
+    let choice = document.getElementById("time-zone").value;
+    document.getElementById('timezone').innerHTML = choice;
 
-//     if(document.getElementsByClassName("modal__btn").onclick) {
-//         document.getElementById("timezone").innerHTML = dayjs().tz(choice).format('HH:mm:ss');
-//     }
-// }
+    let time_of_zone = luxon.DateTime.now().setZone(choice).toFormat('HH:mm:ss')
+    document.getElementById("time-area").innerHTML = time_of_zone;
 
-
-let bogus = luxon.DateTime.local().setZone("America/New_York").toLocaleString();
-document.getElementById("timezone").innerHTML = bogus;
+    let day_of_zone = luxon.DateTime.local().setZone(choice).toLocaleString();
+    document.getElementById("day-area").innerHTML = day_of_zone;
+    
+}

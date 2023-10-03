@@ -136,7 +136,6 @@
     border-style: none;
     border-width: 0;
     cursor: pointer;
-    -webkit-appearance: button;
     text-transform: none;
     overflow: visible;
     line-height: 1.15;
@@ -157,8 +156,6 @@
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
-  
-  
   
   
   
